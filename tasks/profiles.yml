@@ -9,7 +9,7 @@
     mode: 0640
   loop: "{{ systemd_networkd_link | dict2items }}"
   notify:
-    - restart systemd-networkd
+    - reload systemd-networkd
     - check reboot
 
 - name: copy .netdev profiles
@@ -21,7 +21,7 @@
     mode: 0640
   loop: "{{ systemd_networkd_netdev | dict2items }}"
   notify:
-    - restart systemd-networkd
+    - reload systemd-networkd
     - check reboot
 
 - name: copy .network profiles
@@ -33,7 +33,7 @@
     mode: 0640
   loop: "{{ systemd_networkd_network | dict2items }}"
   notify:
-    - restart systemd-networkd
+    - reload systemd-networkd
     - check reboot
 
 # vim: set ts=2 sw=2:
