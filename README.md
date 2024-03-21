@@ -16,7 +16,7 @@ systemd_networkd_netdev: {}
 # network profiles
 systemd_networkd_network: {}
 
-# does the role have to restart systemd-networkd to apply the new profiles ?
+# does the role have to reload systemd-networkd to apply the new profiles ?
 systemd_networkd_apply_config: false
 
 # enable or not systemd_resolved
