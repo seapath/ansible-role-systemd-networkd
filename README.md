@@ -7,6 +7,10 @@ Role Variables
 --------------
 
 ```yaml
+
+# Name of the udev service: "systemd-udev-trigger" for Debian, "systemd-udevd" for CentOS
+service_name_udev: "systemd-udev-trigger"
+
 # link profiles
 systemd_networkd_link: {}
 
