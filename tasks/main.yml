@@ -1,7 +1,6 @@
 ---
 
-- include_vars: "{{ ansible_distribution | replace(' ', '_') }}.yml"
-  ignore_errors: yes
+- include_vars: "{{ seapath_distro }}.yml"
 
 - import_tasks: profiles.yml
 

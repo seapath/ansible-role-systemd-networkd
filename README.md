@@ -30,7 +30,7 @@ systemd_networkd_enable_resolved: true
 Dependencies
 ------------
 
-None
+- detect_seapath_distro (https://github.com/seapath/ansible)
 
 Example Playbook
 -------------------------
