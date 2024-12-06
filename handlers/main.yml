@@ -2,9 +2,7 @@
 # handlers for ansible-role-systemd-networkd
 
 - name: restart udev
-  service:
-    name: "{{ service_name_udev }}"
-    state: restarted
+  command: udevadm trigger
 
 - name: reload systemd-networkd
   service:
