@@ -1,5 +1,8 @@
 ---
 
+- include_vars: "{{ ansible_distribution | replace(' ', '_') }}.yml"
+  ignore_errors: yes
+
 - import_tasks: profiles.yml
 
 - name: enable systemd-networkd
