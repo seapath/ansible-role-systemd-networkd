@@ -1,7 +1,15 @@
 ---
 
-- include_vars: "{{ ansible_distribution | replace(' ', '_') }}.yml"
-  ignore_errors: yes
+- name: gather service facts to detect udev service
+  ansible.builtin.service_facts:
+
+- name: gather service facts to detect udev service
+  ansible.builtin.service_facts:
+
+- name: check if systemd-udev-trigger is present
+  ansible.builtin.set_fact:
+    service_name_udev: systemd-udev-trigger
+  when: '"systemd-udev-trigger.service" in services'
 
 - import_tasks: profiles.yml
 
